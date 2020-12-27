@@ -265,6 +265,9 @@ body {
     margin-top: 40px; }
     .Todo-wrapper small.light {
       color: #9394a5; }
+    @media (max-width: 550px) {
+      .Todo-wrapper small {
+        margin-top: 110px; } }
     @media (max-width: 375px) {
       .Todo-wrapper small {
         margin-top: 110px; } }

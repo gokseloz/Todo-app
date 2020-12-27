@@ -349,6 +349,10 @@ body {
             color: hsl(236, 9%, 61%);
         }
 
+        @media (max-width:550px) {
+            margin-top: 110px;
+        }
+
         @media (max-width:375px) {
             margin-top: 110px;
         }
