@@ -191,6 +191,20 @@ body {
       justify-content: center; }
       .Todo-wrapper .Todo-footer-filters.light {
         background-color: #fafafa; }
+      @media (max-width: 550px) {
+        .Todo-wrapper .Todo-footer-filters {
+          position: absolute;
+          width: auto;
+          left: 0;
+          right: 0;
+          margin-right: 0px;
+          margin-top: 135px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #25273c;
+          padding: 20px;
+          border-radius: 5px; } }
       @media (max-width: 375px) {
         .Todo-wrapper .Todo-footer-filters {
           position: absolute;

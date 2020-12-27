@@ -255,6 +255,21 @@ body {
             &.light {
                 background-color: hsl(0, 0%, 98%);
             }
+
+            @media (max-width:550px) {
+                position: absolute;
+                width: auto;
+                left: 0;
+                right: 0;
+                margin-right: 0px;
+                margin-top: 135px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: hsl(235, 24%, 19%);
+                padding: 20px;
+                border-radius: $borderRadius;
+            }
             @media (max-width:375px) {
                 position: absolute;
                 width: auto;
