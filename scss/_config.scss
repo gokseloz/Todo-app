@@ -1,0 +1,19 @@
+$borderRadius: 5px;
+$bright-blue: hsl(220, 98%, 61%);
+$light-grayish-blue: hsl(236, 33%, 92%);
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    font-size: 18px;
+
+    @media (max-width:375px){
+        font-size: 12px;
+    }
+}
