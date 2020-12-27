@@ -27,7 +27,7 @@ body {
 
 .img {
   width: 100%;
-  height: 30%;
+  height: 40%;
   background: url(../images/bg-desktop-dark.jpg) no-repeat center/cover; }
   .img.light {
     background: url(../images/bg-desktop-light.jpg) no-repeat center/cover; }
@@ -39,6 +39,9 @@ body {
   height: auto;
   margin: 0 auto;
   margin-top: -205px; }
+  @media (max-width: 650px) {
+    .Todo-wrapper {
+      max-width: 90%; } }
   @media (max-width: 375px) {
     .Todo-wrapper {
       max-width: 90%; } }
