@@ -96,7 +96,6 @@ body {
       justify-content: flex-start;
       align-items: center;
       width: 100%;
-      background-color: darkslategrey;
       border: none;
       outline: none;
       color: #b4b7d9;
@@ -104,7 +103,8 @@ body {
       padding: 20px 20px 20px 60px;
       box-sizing: border-box;
       border-bottom: 1px solid #393a4c;
-      cursor: grab; }
+      cursor: grab;
+      overflow-x: hidden; }
       .Todo-wrapper .Todo-list .todos.light {
         background-color: #fafafa;
         border-bottom: 1px solid #e4e5f1;
@@ -157,11 +157,12 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      transform: translateY(-2px);
       cursor: pointer; }
       @media (max-width: 375px) {
         .Todo-wrapper .Todo-list .todos-cancel {
-          opacity: 1; } }
+          opacity: 1;
+          font-size: 16px;
+          margin-right: -10px; } }
   .Todo-wrapper .Todo-footer {
     position: relative;
     display: flex;
