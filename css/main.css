@@ -186,9 +186,9 @@ body {
       width: 33.33334%; }
       .Todo-wrapper .Todo-footer-itemsCounter.light {
         color: inherit; }
-      @media (max-width: 375px) {
+      @media (max-width: 550px) {
         .Todo-wrapper .Todo-footer-itemsCounter {
-          width: 50%; } }
+          width: 40%; } }
     .Todo-wrapper .Todo-footer-filters {
       width: 33.33334%;
       display: flex;
@@ -258,9 +258,10 @@ body {
         color: #484b6a; }
       .Todo-wrapper .Todo-footer-btn:hover {
         color: #e4e5f1; }
-      @media (max-width: 375px) {
+      @media (max-width: 550px) {
         .Todo-wrapper .Todo-footer-btn {
-          width: 50%; } }
+          width: 60%;
+          padding: 0; } }
   .Todo-wrapper small {
     color: #4d5066;
     font-size: calc(0.6rem + 4px);
