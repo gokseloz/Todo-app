@@ -146,6 +146,10 @@ body {
             &:first-child {
                 border-radius: $borderRadius $borderRadius 0 0;
             }
+
+            &:hover .todos-cancel{
+                opacity: 1;
+            }
         }
 
         .todos-circle {
@@ -211,6 +215,7 @@ body {
                 opacity: 1;
                 font-size: 16px;
                 margin-right: -10px;
+                opacity: 1;
             }
         }
     }
