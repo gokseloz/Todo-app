@@ -23,6 +23,11 @@
 <li>Second breakpoint:375px </li>
 </ul>
 
+## Live demo
+<ul> 
+<li><a href="https://todo-app-peach.vercel.app/">Todo-app live</a></li>
+</ul>
+
 ## Short Video
 <ul>
 <li>In issues, you can find a short video of the website </li>
