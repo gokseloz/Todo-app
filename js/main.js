@@ -18,7 +18,7 @@ addBtn.addEventListener("click", function () {
     };
     var paragraph = document.createElement("p"); //todos
     var todosCircle = document.createElement("div"); //circle on the left side of the todos
-    var innerCircle = document.createElement("div"); //creates a hover effect on circle
+   
     var cancelBtn = document.createElement("div"); // X symbol on the right side of the todos
 
     paragraph.classList.add("todos");
@@ -30,14 +30,12 @@ addBtn.addEventListener("click", function () {
     if (document.querySelector("body").classList.contains("light")) { //if it is on light mode, circle are created according to the light mode properties.
         todosCircle.classList.add("todos-circle", "light");
     }
-    innerCircle.classList.add("inner-circle")
 
     cancelBtn.classList.add("todos-cancel")
     cancelBtn.innerText = "✕"
 
-    paragraph.appendChild(todosCircle); //=============================================
-    paragraph.appendChild(innerCircle) // circle and cancel are inside the paragraph //
-    paragraph.appendChild(cancelBtn); // ==============================================
+    paragraph.appendChild(todosCircle); // circle is inside the paragraph
+    paragraph.appendChild(cancelBtn); // cancel is inside the paragraph
     TodoList.appendChild(paragraph); // paragraph is added in Todolist
 
     TodoInput.value = "" // input area got clear after typing the task and entering
