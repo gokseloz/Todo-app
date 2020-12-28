@@ -116,6 +116,8 @@ body {
         border: 3px dotted #666; }
       .Todo-wrapper .Todo-list .todos:first-child {
         border-radius: 5px 5px 0 0; }
+      .Todo-wrapper .Todo-list .todos:hover .todos-cancel {
+        opacity: 1; }
     .Todo-wrapper .Todo-list .todos-circle {
       width: 20px;
       height: 20px;
@@ -162,7 +164,8 @@ body {
         .Todo-wrapper .Todo-list .todos-cancel {
           opacity: 1;
           font-size: 16px;
-          margin-right: -10px; } }
+          margin-right: -10px;
+          opacity: 1; } }
   .Todo-wrapper .Todo-footer {
     position: relative;
     display: flex;
