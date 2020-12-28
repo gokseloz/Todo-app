@@ -35,11 +35,11 @@ body {
 .Todo-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 540px;
   height: auto;
   margin: 0 auto;
   margin-top: -205px; }
-  @media (max-width: 650px) {
+  @media (max-width: 580px) {
     .Todo-wrapper {
       max-width: 90%; } }
   @media (max-width: 375px) {
@@ -100,7 +100,7 @@ body {
       outline: none;
       color: #b4b7d9;
       background-color: #25273c;
-      padding: 20px 20px 20px 60px;
+      padding: 20px 55px 20px 60px;
       box-sizing: border-box;
       border-bottom: 1px solid #393a4c;
       cursor: grab;
