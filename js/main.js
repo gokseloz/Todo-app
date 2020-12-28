@@ -11,7 +11,6 @@ TodoInput.addEventListener("keyup", function (event) {
     }
 });
 
-
 //The whole adding task process begin when pressing enter
 addBtn.addEventListener("click", function () {
     if (TodoInput.value == "") {
@@ -44,7 +43,6 @@ addBtn.addEventListener("click", function () {
     TodoInput.value = "" // input area got clear after typing the task and entering
 
     counItem() //the function which counts the left item, it is written on the left bottom corner 
-    
 
     todosCircle.addEventListener("click", function () { 
         todosCircle.classList.toggle("clicked") // "clicked" class is assigned to circle => check icon is created in it
@@ -55,19 +53,6 @@ addBtn.addEventListener("click", function () {
     cancelBtn.addEventListener("click", function () { // "X" cancel symbol remove the related paragraph(task)
         this.parentElement.remove() 
         counItem() // // count function should be runned because clicking cancel means the task is not anymore exist 
-    })
-
-    document.querySelectorAll(".todos").forEach(element => {                //================================================================================
-        if (window.innerWidth > 375) {                                      //================================================================================
-            element.addEventListener("mouseover", function () {             // width:375px and above => cancel symbol occurs when mouseover on the related task
-                element.querySelector(".todos-cancel").style.opacity = "1"  // width: below 375 => cancel symbol permenantly occurs. No need mouseover
-            })                                                              //================================================================================
-            element.addEventListener("mouseout", function () {              //================================================================================
-                document.querySelectorAll(".todos-cancel").forEach(e => {   //================================================================================
-                    e.style.opacity = "0"
-                })
-            })
-        }
     })
 })
 
