@@ -62,9 +62,9 @@ body {
         background: url(../images/icon-sun.svg) no-repeat center/cover; }
       .Todo-wrapper .Todo-heading-darkLight.moon {
         background: url(../images/icon-moon.svg) no-repeat center/cover; }
-  .Todo-wrapper .Todo-inputBlock {
+  .Todo-wrapper .ToDo-form {
     position: relative; }
-    .Todo-wrapper .Todo-inputBlock-ipt {
+    .Todo-wrapper .ToDo-form-ipt {
       width: 100%;
       background-color: darkslategrey;
       border: none;
@@ -75,15 +75,10 @@ body {
       border-radius: 5px;
       padding: 20px;
       box-sizing: border-box; }
-      .Todo-wrapper .Todo-inputBlock-ipt.light {
+      .Todo-wrapper .ToDo-form-ipt.light {
         background-color: #fafafa;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         color: #484b6a; }
-    .Todo-wrapper .Todo-inputBlock-btn {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      display: none; }
   .Todo-wrapper .Todo-list {
     height: auto;
     margin-top: 20px;
