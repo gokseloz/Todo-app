@@ -31,12 +31,12 @@
 - Overview <br>
 ![1](https://user-images.githubusercontent.com/72968539/103219840-116b7180-491f-11eb-9c9e-5b618c4bfaa7.jpg)
 
-- Light mode
+- Light mode <br>
 ![2](https://user-images.githubusercontent.com/72968539/103219919-395ad500-491f-11eb-9384-b6c5ae3a5284.png)
 
-- Dark mode-Active filter is on
+- Dark mode-Active filter is on <br>
 ![3](https://user-images.githubusercontent.com/72968539/103219947-4b3c7800-491f-11eb-8abe-c26ed49d5b1c.png)
 
-- Mobile version
+- Mobile version <br>
 ![4](https://user-images.githubusercontent.com/72968539/103219974-60190b80-491f-11eb-9026-eaea857bad18.png)
 
