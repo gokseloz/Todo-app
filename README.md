@@ -1,64 +1,42 @@
 ## Todo-app
-<ul>
-<li>Completed the Todo-app challenge from the https://www.frontendmentor.io </li>
- </ul>
+- A challenge from Frontend Mentor
  
  ## Why did I do this?
- <ul>
-<li>I try to complete challenges because it allows me to improve my skills in a real-life workflow. /</li>
- </ul>
+- I completed this challenge in order to improve my HTML, CSS and JS skills
+ 
+ ## What did I learn from this project?
+- Generally how to do a todo-app
+  - creating todo items
+  - adding and showing them in the todolist
+  - counting how many uncompleted todo left
+  - filtering the todos
+  - dark and light mode
  
  ## How did I do this?
  ### Technologies
-<ul>
-<li>Project is created with: HTML, CSS & JavaScript.</li>
-<li>For CSS: LESS preprocessor is applied. In order to compile LESS files to CSS, node-sass with npm is utilized.</li>
-<li>For JS: JQuery and native JS is applied</li>
- </ul>
+- HTML, CSS & JavaScript
+- For CSS: LESS preprocessor is applied. In order to compile LESS files to CSS, node-sass with npm is utilized
+- For JS: Vanilla JS is applied
  
  ### Responsivity
-<ul>
-<li>Fully Responsive</li>
-<li>First breakpoint:650px </li> 
-<li>Second breakpoint:375px </li>
-</ul>
+- Fully Responsive
 
 ## Live demo
-<ul> 
-<li><a href="https://todo-app-peach.vercel.app/" target="_blank">Todo-app live</a></li>
-</ul>
+- [See live demo](https://todo-app-peach.vercel.app/)
 
 ## Short Video
-<ul>
-<li>In issues, you can find a short video of the website </li>
-&nbsp &nbsp &nbsp OR
-<li><a href ="https://user-images.githubusercontent.com/72968539/103219521-3dd2be00-491e-11eb-8976-02d07434ce8f.mp4" target="_blank">you can reach it from here</a></li>
-</ul>
+- [See here](https://user-images.githubusercontent.com/72968539/103219521-3dd2be00-491e-11eb-8976-02d07434ce8f.mp4)
 
 ## ScreenShots
-<ul>
-<li>Overview</li>
-</ul>
-
+- Overview
 ![1](https://user-images.githubusercontent.com/72968539/103219840-116b7180-491f-11eb-9c9e-5b618c4bfaa7.jpg)
 
-
-<ul>
-<li>Light mode</li>
-</ul>
- 
+- Light mode
 ![2](https://user-images.githubusercontent.com/72968539/103219919-395ad500-491f-11eb-9384-b6c5ae3a5284.png)
 
-
-<ul>
-<li>Dark mode-Active filter is on</li>
-</ul>
- 
+- Dark mode-Active filter is on
 ![3](https://user-images.githubusercontent.com/72968539/103219947-4b3c7800-491f-11eb-8abe-c26ed49d5b1c.png)
 
-<ul>
-<li>Mobile version</li>
-</ul>
-
+- Mobile version
 ![4](https://user-images.githubusercontent.com/72968539/103219974-60190b80-491f-11eb-9026-eaea857bad18.png)
 
