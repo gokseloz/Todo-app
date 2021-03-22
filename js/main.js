@@ -1,6 +1,6 @@
-let TodoInput = document.querySelector(".Todo-inputBlock-ipt");
+let toDoInput = document.querySelector(".ToDo-form-ipt");
+let toDoForm = document.querySelector(".ToDo-form");
 let TodoList = document.querySelector(".Todo-list");
-let addBtn = document.querySelector(".Todo-inputBlock-btn");
 let itemsCounter = document.querySelector(".Todo-footer-itemsCounter");
 let filterBtns = document.querySelectorAll(".filterBtn")
 let allBtn = document.querySelector(".all")
@@ -13,17 +13,16 @@ let body = document.querySelector("body")
 
 const addTodo = (e) => {
     e.preventDefault()
-    toDoMaker(TodoInput.value)
-    TodoInput.value = ""
+    toDoMaker(toDoInput.value)
+    toDoInput.value = ""
 }
 
-document.querySelector(".Todo-inputBlock").addEventListener("submit", addTodo)
+toDoForm.addEventListener("submit", addTodo)
 
 const toDoMaker = (text) => {
     let toDoItem = document.createElement("p");
     let toDoCircle = document.createElement("div")
     let toDoCancel = document.createElement("div")
-
 
     toDoItem.classList.add("todos")
     toDoCircle.classList.add("todos-circle")
@@ -108,7 +107,7 @@ filterBtns.forEach(filterBtn => {
 document.querySelector(".Todo-heading-darkLight").addEventListener("click", () => {
     document.querySelector(".img").classList.toggle("light")
     document.querySelector(".Todo-heading-darkLight").classList.toggle("moon")
-    document.querySelector(".Todo-inputBlock-ipt").classList.toggle("light")
+    document.querySelector(".ToDo-form-ipt").classList.toggle("light")
     document.querySelectorAll(".todos").forEach(element => {
         element.classList.toggle("light");
     })
@@ -127,13 +126,6 @@ document.querySelector(".Todo-heading-darkLight").addEventListener("click", () =
     document.querySelector(".Todo-footer-itemsCounter").classList.toggle("light")
     document.querySelector("small").classList.toggle("light")
 });
-
-// TodoInput.addEventListener("keyup", (e) => {
-//     if (e.keyCode === 13) {
-//         e.preventDefault();
-//         addTodo()
-//     }
-// });
 
 // drag and drop library
 $(() => {
