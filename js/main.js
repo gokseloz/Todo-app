@@ -2,20 +2,22 @@ let TodoInput = document.querySelector(".Todo-inputBlock-ipt");
 let TodoList = document.querySelector(".Todo-list");
 let addBtn = document.querySelector(".Todo-inputBlock-btn");
 let itemsCounter = document.querySelector(".Todo-footer-itemsCounter");
+let filterBtns = document.querySelectorAll(".filterBtn")
 let allBtn = document.querySelector(".all")
 let activeBtn = document.querySelector(".active")
 let completedBtn = document.querySelector(".completed")
 let clearCompletedBtn = document.querySelector(".clear-completed")
 let checkedTodo = document.querySelectorAll(".checked")
+let darkLightModeBtn = document.querySelector(".Todo-heading-darkLight")
 let body = document.querySelector("body")
 
-const addTodo = () => {
+const addTodo = (e) => {
+    e.preventDefault()
     toDoMaker(TodoInput.value)
-    // saveTodo(TodoInput.value)
     TodoInput.value = ""
 }
 
-addBtn.addEventListener("click", addTodo)
+document.querySelector(".Todo-inputBlock").addEventListener("submit", addTodo)
 
 const toDoMaker = (text) => {
     let toDoItem = document.createElement("p");
@@ -57,20 +59,6 @@ const toDoMaker = (text) => {
     })
 }
 
-// const saveTodo = (item) => {
-//     let storedItems = localStorage.getItem(`savedValues`)
-//     storedItems = storedItems ? JSON.parse(storedItems) : []
-//     storedItems.push(item)
-//     localStorage.setItem(`savedValues`, JSON.stringify(storedItems))
-// }
-
-// let storedItems = localStorage.getItem(`savedValues`)
-// if (storedItems) {
-//     JSON.parse(storedItems).forEach((item) => {
-//         toDoMaker(item)
-//     })
-// }
-
 const countItem = () => {
     let itemCount = TodoList.childElementCount
     let checkedElement = document.querySelectorAll(".checked").length
@@ -107,7 +95,7 @@ activeBtn.addEventListener("click", () => {
     });
 })
 
-let filterBtns = document.querySelectorAll(".filterBtn")
+
 filterBtns.forEach(filterBtn => {
     filterBtn.addEventListener("click", () => {
         for(let i = 0; i< filterBtns.length; i ++){
@@ -116,22 +104,6 @@ filterBtns.forEach(filterBtn => {
         filterBtn.classList.add("selected")
     })
 })
-
-// $(".filterBtn").on("click", () => {
-//     $(".filterBtn").removeClass("selected");
-//     $(this).addClass("selected")
-// })
-
-// $(".filterBtn").on("click", () => {
-//     if ($("body").hasClass("light")) {
-//         $(".filterBtn").addClass("light");
-//         $(".filterBtn").removeClass("selected");
-//         $(this).addClass("selected")
-//     } else {
-//         $(".filterBtn").removeClass("selected");
-//         $(this).addClass("selected")
-//     }
-// })
 
 document.querySelector(".Todo-heading-darkLight").addEventListener("click", () => {
     document.querySelector(".img").classList.toggle("light")
@@ -156,12 +128,12 @@ document.querySelector(".Todo-heading-darkLight").addEventListener("click", () =
     document.querySelector("small").classList.toggle("light")
 });
 
-TodoInput.addEventListener("keyup", (e) => {
-    if (e.keyCode === 13) {
-        e.preventDefault();
-        addTodo()
-    }
-});
+// TodoInput.addEventListener("keyup", (e) => {
+//     if (e.keyCode === 13) {
+//         e.preventDefault();
+//         addTodo()
+//     }
+// });
 
 // drag and drop library
 $(() => {
