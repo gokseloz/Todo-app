@@ -81,7 +81,7 @@ clearCompletedBtn.addEventListener("click", () => {
     updateList()
 })
 allBtn.addEventListener("click", () => {
-    document.querySelectorAll(".todos").forEach(element => {
+    document.querySelectorAll(".todoDiv").forEach(element => {
         element.style.display = "flex"
     });
 
@@ -91,7 +91,7 @@ completedBtn.addEventListener("click", () => {
         element.style.display = "flex"
     });
 
-    document.querySelectorAll(".todos:not(.checked)").forEach(element => {
+    document.querySelectorAll(".todoDiv:not(.checked)").forEach(element => {
         element.style.display = "none"
     });
     updateList()
@@ -100,7 +100,7 @@ activeBtn.addEventListener("click", () => {
     document.querySelectorAll(".checked").forEach(element => {
         element.style.display = "none"
     });
-    document.querySelectorAll(".todos:not(.checked)").forEach(element => {
+    document.querySelectorAll(".todoDiv:not(.checked)").forEach(element => {
         element.style.display = "flex"
     });
 })
