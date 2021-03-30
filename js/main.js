@@ -1,5 +1,5 @@
-let toDoInput = document.querySelector(".ToDo-form-ipt");
 let toDoForm = document.querySelector(".ToDo-form");
+let toDoInput = document.querySelector(".ToDo-form-ipt");
 let TodoList = document.querySelector(".Todo-list");
 let itemsCounter = document.querySelector(".Todo-footer-itemsCounter");
 let filterBtns = document.querySelectorAll(".filterBtn")
@@ -11,6 +11,10 @@ let checkedTodo = document.querySelectorAll(".checked")
 let darkLightModeBtn = document.querySelector(".Todo-heading-darkLight")
 let body = document.querySelector("body")
 
+const allTodos = JSON.parse(localStorage.getItem("allTodos"))
+
+
+
 const addTodo = (e) => {
     e.preventDefault()
     toDoMaker(toDoInput.value)
@@ -20,33 +24,34 @@ const addTodo = (e) => {
 toDoForm.addEventListener("submit", addTodo)
 
 const toDoMaker = (text) => {
+
+    let todoDiv = document.createElement("div")
     let toDoItem = document.createElement("p");
     let toDoCircle = document.createElement("div")
     let toDoCancel = document.createElement("div")
 
+    todoDiv.classList.add("todoDiv")
     toDoItem.classList.add("todos")
     toDoCircle.classList.add("todos-circle")
     toDoCancel.classList.add("todos-cancel")
-
+    toDoCancel.innerHTML = `<i class="fas fa-times"></i>`
     toDoItem.textContent = text
-    toDoCancel.textContent = "✕"
 
     if (body.classList.contains("light")) {
-        toDoItem.classList.add("todos", "light")
+        todoDiv.classList.add("todos", "light")
         toDoCircle.classList.add("todos-circle", "light")
     }
 
-    toDoItem.appendChild(toDoCircle)
-    toDoItem.appendChild(toDoCancel)
-    TodoList.appendChild(toDoItem)
-
-    countItem()
+    todoDiv.appendChild(toDoItem)
+    todoDiv.appendChild(toDoCircle)
+    todoDiv.appendChild(toDoCancel)
+    TodoList.appendChild(todoDiv)
 
     toDoCircle.addEventListener("click", () => {
         toDoCircle.classList.toggle("clicked")
-        toDoItem.classList.toggle("checked")
+        todoDiv.classList.toggle("checked")
         countItem()
-
+        updateList()
     })
 
     toDoCancel.addEventListener("click", () => {
@@ -55,7 +60,11 @@ const toDoMaker = (text) => {
         if (TodoList.childElementCount == 0) {
             $(".filterBtn").removeClass("selected");
         }
+        updateList()
     })
+
+    countItem()
+    updateList()
 }
 
 const countItem = () => {
@@ -69,6 +78,7 @@ clearCompletedBtn.addEventListener("click", () => {
     document.querySelectorAll(".checked").forEach(element => {
         element.remove()
     });
+    updateList()
 })
 allBtn.addEventListener("click", () => {
     document.querySelectorAll(".todos").forEach(element => {
@@ -84,6 +94,7 @@ completedBtn.addEventListener("click", () => {
     document.querySelectorAll(".todos:not(.checked)").forEach(element => {
         element.style.display = "none"
     });
+    updateList()
 })
 activeBtn.addEventListener("click", () => {
     document.querySelectorAll(".checked").forEach(element => {
@@ -97,7 +108,7 @@ activeBtn.addEventListener("click", () => {
 
 filterBtns.forEach(filterBtn => {
     filterBtn.addEventListener("click", () => {
-        for(let i = 0; i< filterBtns.length; i ++){
+        for (let i = 0; i < filterBtns.length; i++) {
             filterBtns[i].classList.remove("selected")
         }
         filterBtn.classList.add("selected")
@@ -108,7 +119,7 @@ document.querySelector(".Todo-heading-darkLight").addEventListener("click", () =
     document.querySelector(".img").classList.toggle("light")
     document.querySelector(".Todo-heading-darkLight").classList.toggle("moon")
     document.querySelector(".ToDo-form-ipt").classList.toggle("light")
-    document.querySelectorAll(".todos").forEach(element => {
+    document.querySelectorAll(".todoDiv").forEach(element => {
         element.classList.toggle("light");
     })
     document.querySelector(".Todo-footer").classList.toggle("light")
@@ -126,6 +137,28 @@ document.querySelector(".Todo-heading-darkLight").addEventListener("click", () =
     document.querySelector(".Todo-footer-itemsCounter").classList.toggle("light")
     document.querySelector("small").classList.toggle("light")
 });
+
+if (allTodos) {
+    allTodos.forEach(todo => toDoMaker(todo.text))
+    
+}
+
+function updateList() {
+    todosEl = document.querySelectorAll(".todos")
+
+    const allTodos = []
+
+    todosEl.forEach(todoEl => {
+        allTodos.push({
+            text: todoEl.innerText,
+            checked: todoEl.classList.contains("checked")
+        })
+      
+    })
+    
+
+    localStorage.setItem("allTodos", JSON.stringify(allTodos))
+}
 
 // drag and drop library
 $(() => {
