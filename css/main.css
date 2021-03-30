@@ -85,7 +85,7 @@ body {
     position: relative; }
     .Todo-wrapper .Todo-list.light {
       box-shadow: 5px -10px 20px rgba(0, 0, 0, 0.1); }
-    .Todo-wrapper .Todo-list .todos {
+    .Todo-wrapper .Todo-list .todoDiv {
       font-size: 1rem;
       display: flex;
       justify-content: flex-start;
@@ -100,18 +100,18 @@ body {
       border-bottom: 1px solid #393a4c;
       cursor: grab;
       overflow-x: hidden; }
-      .Todo-wrapper .Todo-list .todos.light {
+      .Todo-wrapper .Todo-list .todoDiv.light {
         background-color: #fafafa;
         border-bottom: 1px solid #e4e5f1;
         color: #484b6a; }
-      .Todo-wrapper .Todo-list .todos.checked {
+      .Todo-wrapper .Todo-list .todoDiv.checked {
         text-decoration: line-through;
         color: #4d5066; }
-      .Todo-wrapper .Todo-list .todos.over {
+      .Todo-wrapper .Todo-list .todoDiv.over {
         border: 3px dotted #666; }
-      .Todo-wrapper .Todo-list .todos:first-child {
+      .Todo-wrapper .Todo-list .todoDiv:first-child {
         border-radius: 5px 5px 0 0; }
-      .Todo-wrapper .Todo-list .todos:hover .todos-cancel {
+      .Todo-wrapper .Todo-list .todoDiv:hover .todos-cancel {
         opacity: 1; }
     .Todo-wrapper .Todo-list .todos-circle {
       width: 20px;
@@ -147,7 +147,7 @@ body {
     .Todo-wrapper .Todo-list .todos-cancel {
       opacity: 0;
       position: absolute;
-      font-size: 20px;
+      font-size: 25px;
       color: #4d5066;
       right: 20px;
       padding: 10px;
