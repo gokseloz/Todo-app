@@ -140,11 +140,10 @@ document.querySelector(".Todo-heading-darkLight").addEventListener("click", () =
 
 if (allTodos) {
     allTodos.forEach(todo => toDoMaker(todo.text))
-    
 }
 
 function updateList() {
-    todosEl = document.querySelectorAll(".todos")
+    todosEl = document.querySelectorAll(".todoDiv")
 
     const allTodos = []
 
@@ -153,9 +152,9 @@ function updateList() {
             text: todoEl.innerText,
             checked: todoEl.classList.contains("checked")
         })
-      
+
     })
-    
+
 
     localStorage.setItem("allTodos", JSON.stringify(allTodos))
 }
